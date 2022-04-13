@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <title>Box Model</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <p class="info">The first set of boxes are displayed at different sizes even though size 
+            properties of both are written with the same values.
+            The only difference is that the blue box is using the standard box model 
+            while the pink box uses the alternative model.</p>
+       <div class="set1">
+            <div class="box-S"><p class="box-label">Standard Box Model</p></div>
+            <div class="box-A"><p class="box-label">Alternative Box Model</p></div>
+       </div>
+       <p class="info">Here, the pink box still has the 'box-sizing: border-box;' property, but it's width and 
+                        height values have been manually changed to match the blue box.
+       </p>
+        <div class="set2">
+            <div class="box-S2"><p class="box-label">Standard Box Model</p></div>
+        <div class="box-A2"><p class="box-label">Alternative Box Model</p></div>
+        </div>
+        <p class="info">In this set, the blue box has been given width and height properties to match 
+                        the pink box, again without changing the the box model type.
+         </p>
+        <div class="set3">
+            <div class="box-S3"><p class="box-label">Standard Box Model</p></div>
+            <div class="box-A3"><p class="box-label">Alternative Box Model</p></div>
+        </div>
+        <p class="info">In all of these examples, the pink box uses the alternative box model while the blue one uses 
+               the standard model. Adding or removing 'box-sizing: border-box;' could quickly match the size of one
+               box to the other, but this exercise was about developing a better understanding of how the boxes behave
+               depending on which model is being used.
+        </p>
+    </div>
+    </body>
+    </html>

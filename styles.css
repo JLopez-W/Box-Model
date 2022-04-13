@@ -1,0 +1,97 @@
+body {
+    background-color: whitesmoke;
+}
+
+.set1, .set2, .set3 {
+    display: flex;
+}
+.info {
+    padding: 15px;
+}
+
+.box-label {
+    text-align: center;
+    background-color: whitesmoke; 
+    border: 1px solid slategrey;
+}
+
+/*  The boxes in 'Set 1' are displayed at different sizes even though size 
+    properties of both are written with the same values.
+    The only difference is .box-S (blue) uses the standard model 
+    while  .box-A (pink) uses the alternative model. */
+
+/* 
+   .box-S actual size with standard box model: 564 x 264 
+   total box width 564 = 500 (content area) + 30 + 30 (padding) + 2 + 2 (border)
+   total box height 264 = 200 (content area) + 30 + 30 (padding) + 2 + 2 (border)
+*/
+.box-S {
+    background-color: lightblue;
+    border: 2px solid black;
+    width: 500px;
+    height: 200px;
+    padding: 30px;
+    margin: 30px;
+}
+
+/* 
+   .box-A actual size with alternative box model: 500 x 200
+   total content area width 436 = 500 (visible area: content padding + border) - 30 - 30 (padding) - 2 - 2 (border)
+   total content area height 436 = 136 (visible area: content padding + border) - 30 - 30 (padding) - 2 - 2 (border
+*/
+.box-A {
+    box-sizing: border-box;
+    background-color: lightpink;
+    border: 2px solid black;
+    width: 500px;
+    height: 200px;
+    padding: 30px;
+    margin: 30px;
+}
+
+/* The sets below show how to make the boxes appear identical >>> without changing the box model type <<< */
+
+
+/* To make .box-A2 match .box-S2, the width must be 564px, and height must be 264px */
+
+.box-S2 {
+    background-color: lightblue;
+    border: 2px solid black;
+    width: 500px;
+    height: 200px;
+    padding: 30px;
+    margin: 30px;
+}
+
+.box-A2 {
+    box-sizing: border-box;
+    background-color: lightpink;
+    border: 2px solid black;
+    width: 564px;
+    height: 264px;
+    padding: 30px;
+    margin: 30px;
+}
+
+/* To make .box-S3 match .box-A3, TOTAL width must be 500px (content area 436), 
+   and TOTAL height must be 200px (content area 136) 
+*/
+
+.box-S3 {
+    background-color: lightblue;
+    border: 2px solid black;
+    width: 436px;
+    height: 136px;
+    padding: 30px;
+    margin: 30px;
+}
+
+.box-A3 {
+    box-sizing: border-box;
+    background-color: lightpink;
+    border: 2px solid black;
+    width: 500px;
+    height: 200px;
+    padding: 30px;
+    margin: 30px;
+}
